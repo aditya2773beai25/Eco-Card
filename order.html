@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Place your order at Eco Shop. Review your cart and confirm your delivery details.">
+  <title>Eco Shop | Place Order</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <a href="home.html" class="logo">
+      <span class="logo-icon">🍀</span>
+      <div><h2>Eco Shop</h2><p>Future is safe with us</p></div>
+    </a>
+    <nav class="nav-menu" id="nav-menu">
+      <a href="home.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="order.html">Place Order</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </nav>
+    <div class="header-right">
+      <div class="search-box">
+        <input type="text" id="header-search" placeholder="Search products…">
+        <button id="header-search-btn">🔍</button>
+      </div>
+      <a href="order.html" class="cart-icon-btn" id="cart-icon-link" title="View cart">
+        🛒 <span class="cart-badge" id="cart-badge">0</span>
+      </a>
+      <a href="login.html" class="header-login-btn" id="account-btn">Login</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="order-wrapper">
+  <div class="order-card">
+    <div class="form-card">
+
+      <div id="order-form-section">
+        <div class="order-header-icon">🛒</div>
+        <h2 style="text-align:center;font-family:'Playfair Display',serif;color:var(--dark)">Place Your Order</h2>
+        <p class="subtitle" style="text-align:center;color:var(--muted);font-size:13px;margin-bottom:18px">Fill in your details and we'll take care of the rest.</p>
+
+        <div id="cart-summary-box" class="cart-summary-box"></div>
+
+        <div class="eco-note">🌳 For every order placed, we plant a tree in your name.</div>
+
+        <div class="two-col">
+          <div class="form-group">
+            <label for="order-fname">First Name</label>
+            <input type="text" id="order-fname" placeholder="Rahul">
+            <span class="error-text">Please enter your first name.</span>
+          </div>
+          <div class="form-group">
+            <label for="order-lname">Last Name</label>
+            <input type="text" id="order-lname" placeholder="Sharma">
+            <span class="error-text">Please enter your last name.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="order-email">Email Address</label>
+          <input type="email" id="order-email" placeholder="rahul@example.com">
+          <span class="error-text">Please enter a valid email address.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="order-phone">Phone Number (10 digits)</label>
+          <input type="tel" id="order-phone" placeholder="9876543210" maxlength="10">
+          <span class="error-text">Please enter a valid 10-digit phone number.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="order-address">Delivery Address</label>
+          <textarea id="order-address" placeholder="House No., Street, City, State, PIN Code" rows="3"></textarea>
+          <span class="error-text">Please enter your delivery address.</span>
+        </div>
+
+        <button class="btn btn-primary btn-full" onclick="submitOrder()">Confirm Order →</button>
+      </div>
+
+      <div class="success-block" id="order-success">
+        <span class="success-icon">🎉</span>
+        <h3>Order Confirmed!</h3>
+        <p>Thank you! We'll send a confirmation to your email shortly.<br><br>
+        🌳 <strong>A tree will be planted in your name!</strong></p>
+        <br>
+        <a href="payment.html" class="btn btn-primary btn-full">Proceed to Payment →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="logo-icon">🍀</div>
+      <h3>Eco Shop</h3>
+      <p>Sustainable electronics for a greener tomorrow. We plant a tree for every order placed.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="order.html">Place Order</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Stay in Touch</h4>
+      <p>Enter your email for the latest eco deals.</p>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Your email address">
+        <button>➤</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Eco Shop. All rights reserved.</span>
+    <span>🌱 Carbon Neutral Shipping</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<button class="back-to-top" id="back-to-top" title="Back to top">↑</button>
+<script src="main.js"></script>
+</body>
+</html>

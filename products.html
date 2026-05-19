@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse Eco Shop's certified sustainable electronics — eco phones, laptops, speakers and headphones. All products are eco-certified and built to last.">
+  <title>Eco Shop | Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <a href="home.html" class="logo">
+      <span class="logo-icon">🍀</span>
+      <div><h2>Eco Shop</h2><p>Future is safe with us</p></div>
+    </a>
+    <nav class="nav-menu" id="nav-menu">
+      <a href="home.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="order.html">Place Order</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </nav>
+    <div class="header-right">
+      <div class="search-box">
+        <input type="text" id="header-search" placeholder="Search products…">
+        <button id="header-search-btn">🔍</button>
+      </div>
+      <a href="order.html" class="cart-icon-btn" id="cart-icon-link" title="View cart">
+        🛒 <span class="cart-badge" id="cart-badge">0</span>
+      </a>
+      <a href="login.html" class="header-login-btn" id="account-btn">Login</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <h1>Our Products</h1>
+  <p>Certified sustainable electronics — better for you, better for the planet.</p>
+</div>
+
+<section class="products-section">
+  <div class="product-grid">
+
+    <!-- id="card-phone" replaces data-name="Eco Phone" data-price="39999" -->
+    <div class="product-card" id="card-phone">
+      <div class="product-thumb"><img src="images/ecophone.jpg" alt="Eco Phone"></div>
+      <div class="product-body">
+        <h3>Eco Phone</h3>
+        <p class="product-desc">Built with recycled aluminium and bamboo composites. 3-day battery life, zero harmful chemicals.</p>
+        <div class="eco-tag">🌱 Eco Certified</div>
+        <div class="product-price">₹39,999</div>
+        <div class="product-actions">
+          <div class="qty-box">
+            <button class="qty-minus">−</button>
+            <span class="qty-count">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- id="card-laptop" replaces data-name="Eco Laptop" data-price="99999" -->
+    <div class="product-card" id="card-laptop">
+      <div class="product-thumb"><img src="images/ecolaptop.jpg" alt="Eco Laptop"></div>
+      <div class="product-body">
+        <h3>Eco Laptop</h3>
+        <p class="product-desc">Energy-star rated, made with 70% recycled parts. Powerful performance with a minimal footprint.</p>
+        <div class="eco-tag">🌱 Eco Certified</div>
+        <div class="product-price">₹99,999</div>
+        <div class="product-actions">
+          <div class="qty-box">
+            <button class="qty-minus">−</button>
+            <span class="qty-count">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- id="card-speaker" replaces data-name="Eco Speaker" data-price="39999" -->
+    <div class="product-card" id="card-speaker">
+      <div class="product-thumb"><img src="images/speakers.jpg" alt="Eco Speaker"></div>
+      <div class="product-body">
+        <h3>Eco Speaker</h3>
+        <p class="product-desc">Solar-charging Bluetooth speaker with biodegradable cork body and 360° rich sound.</p>
+        <div class="eco-tag">🌱 Eco Certified</div>
+        <div class="product-price">₹39,999</div>
+        <div class="product-actions">
+          <div class="qty-box">
+            <button class="qty-minus">−</button>
+            <span class="qty-count">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- id="card-headphones" replaces data-name="Eco Headphones" data-price="99999" -->
+    <div class="product-card" id="card-headphones">
+      <div class="product-thumb"><img src="images/headphones.jpg" alt="Eco Headphones"></div>
+      <div class="product-body">
+        <h3>Eco Headphones</h3>
+        <p class="product-desc">Premium noise-cancelling headphones made from ocean-recycled plastics. 40-hour battery.</p>
+        <div class="eco-tag">🌱 Eco Certified</div>
+        <div class="product-price">₹99,999</div>
+        <div class="product-actions">
+          <div class="qty-box">
+            <button class="qty-minus">−</button>
+            <span class="qty-count">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="logo-icon">🍀</div>
+      <h3>Eco Shop</h3>
+      <p>Sustainable electronics for a greener tomorrow. We plant a tree for every order placed.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="order.html">Place Order</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Stay in Touch</h4>
+      <p>Enter your email for the latest eco deals.</p>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Your email address">
+        <button>➤</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Eco Shop. All rights reserved.</span>
+    <span>🌱 Carbon Neutral Shipping</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<button class="back-to-top" id="back-to-top" title="Back to top">↑</button>
+<script src="main.js"></script>
+</body>
+</html>
