@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure checkout at Eco Shop. Pay via card, UPI, or cash on delivery with 256-bit SSL encryption.">
+  <title>Eco Shop | Secure Checkout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">🍀</span>
+      <div><h2>Eco Shop</h2><p>Future is safe with us</p></div>
+    </a>
+    <nav class="nav-menu" id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="order.html">Place Order</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </nav>
+    <div class="header-right">
+      <div class="search-box">
+        <input type="text" id="header-search" placeholder="Search products…">
+        <button id="header-search-btn">🔍</button>
+      </div>
+      <a href="order.html" class="cart-icon-btn" id="cart-icon-link" title="View cart">
+        🛒 <span class="cart-badge" id="cart-badge">0</span>
+      </a>
+      <a href="login.html" class="header-login-btn" id="account-btn">Login</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="payment-wrapper">
+  <div class="payment-card">
+
+    <div id="payment-form">
+      <div class="payment-header">
+        <div class="icon">💳</div>
+        <h2>Secure Checkout</h2>
+        <p>Choose your preferred payment method below.</p>
+      </div>
+
+      <div class="method-tabs">
+        <button class="method-tab active" onclick="showPayMethod('card', this)">
+          <span class="tab-icon">💳</span>Card
+        </button>
+        <button class="method-tab" onclick="showPayMethod('upi', this)">
+          <span class="tab-icon">📱</span>UPI
+        </button>
+        <button class="method-tab" onclick="showPayMethod('cod', this)">
+          <span class="tab-icon">🚚</span>Cash on Delivery
+        </button>
+      </div>
+
+      <div class="pay-section active" id="card">
+        <div class="form-group">
+          <label>Cardholder Name</label>
+          <input type="text" placeholder="Rahul Sharma" autocomplete="cc-name">
+        </div>
+        <div class="form-group">
+          <label>Card Number</label>
+          <input type="tel" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCard(this)" autocomplete="cc-number">
+        </div>
+        <div class="two-col">
+          <div class="form-group">
+            <label>Expiry Date</label>
+            <input type="text" placeholder="MM / YY" maxlength="7" oninput="formatExpiry(this)" autocomplete="cc-exp">
+          </div>
+          <div class="form-group">
+            <label>CVV</label>
+            <input type="password" placeholder="•••" maxlength="3" autocomplete="cc-csc">
+          </div>
+        </div>
+      </div>
+
+      <div class="pay-section" id="upi">
+        <div class="qr-section">
+          <p>Scan the QR code with any UPI app to pay.</p>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=ecoshop@upi&pn=EcoShop&cu=INR" alt="UPI QR Code" width="168" height="168">
+          <div class="upi-id">📲 ecoshop@upi</div>
+        </div>
+        <div class="form-group" style="margin-top:14px">
+          <label>Or enter your UPI ID</label>
+          <input type="text" placeholder="yourname@bank">
+        </div>
+      </div>
+
+      <div class="pay-section" id="cod">
+        <div class="cod-message">
+          🚚 <strong>Cash on Delivery</strong> selected.<br>
+          Pay when your order arrives. No prepayment required.
+        </div>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Rahul Sharma">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="9876543210" maxlength="10">
+        </div>
+      </div>
+
+      <button class="pay-btn" onclick="confirmPayment()">🔒 Confirm Payment</button>
+      <div class="secure-note">🔒 256-bit SSL encrypted — your data is always safe</div>
+    </div>
+
+    <div class="success-screen" id="success-screen">
+      <span class="big-icon">🎉</span>
+      <h3>Payment Successful!</h3>
+      <p>Your order is confirmed. We'll send your receipt to your email shortly.<br><br>
+      🌳 <strong>A tree is being planted in your name. Thank you for choosing Eco Shop!</strong></p>
+      <br>
+      <a href="index.html" class="btn btn-primary btn-full">Back to Home →</a>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="logo-icon">🍀</div>
+      <h3>Eco Shop</h3>
+      <p>Sustainable electronics for a greener tomorrow. We plant a tree for every order placed.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="order.html">Place Order</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Stay in Touch</h4>
+      <p>Enter your email for the latest eco deals.</p>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Your email address">
+        <button>➤</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Eco Shop. All rights reserved.</span>
+    <span>🌱 Carbon Neutral Shipping</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<button class="back-to-top" id="back-to-top" title="Back to top">↑</button>
+<script src="main.js"></script>
+</body>
+</html>
