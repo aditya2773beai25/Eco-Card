@@ -6,7 +6,7 @@ const productInfo = {
   'card-phone':      { name: 'Eco Phone',       price: 39999  },
   'card-laptop':     { name: 'Eco Laptop',       price: 99999  },
   'card-speaker':    { name: 'Eco Speaker',      price: 39999  },
-  'card-headphones': { name: 'Eco Headphones',   price: 99999  }
+  'card-headphones': { name: 'Eco Headphones',   price: 9999  }
 };
 
 /* ── SIMPLE VALIDATORS  (replaces RegExp) ── */
