@@ -86,7 +86,14 @@
         <p>Login or create a new account to get started.</p>
       </div>
 
-
+      <div class="method-tabs">
+        <button class="method-tab active" onclick="showAuthTab('login', this)">
+          <span class="tab-icon">🔑</span>Login
+        </button>
+        <button class="method-tab" onclick="showAuthTab('signup', this)">
+          <span class="tab-icon">🌱</span>Sign Up
+        </button>
+      </div>
 
       <div class="auth-tab-section active" id="login">
         <div class="form-group">
