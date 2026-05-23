@@ -415,34 +415,6 @@ function initProductPage() {
   }
 }
 
-/* ── HAMBURGER ── */
-function initHamburger() {
-  const btn = document.getElementById('hamburger');
-  const nav = document.getElementById('nav-menu');
-  if (!btn || !nav) return;
-  btn.addEventListener('click', function () {
-    btn.classList.toggle('open');
-    nav.classList.toggle('open');
-  });
-  const links = nav.querySelectorAll('a');
-  for (let i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', function () {
-      btn.classList.remove('open');
-      nav.classList.remove('open');
-    });
-  }
-}
-
-/* ── BACK TO TOP ── */
-function initBackToTop() {
-  const btn = document.getElementById('back-to-top');
-  if (!btn) return;
-  window.addEventListener('scroll', function () {
-    btn.classList.toggle('visible', window.scrollY > 300);
-  });
-  btn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
-}
-
 /* ── RATING BUTTONS ── */
 function initRatingButtons() {
   const btns = document.querySelectorAll('.rating-row button');
