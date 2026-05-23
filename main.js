@@ -709,7 +709,6 @@ function appendBotMessage(text, suggestions) {
 
   const typing     = document.createElement('div');
   typing.className = 'chat-typing';
-  typing.innerHTML = '<span></span><span></span><span></span>';
   msgs.appendChild(typing);
   msgs.scrollTop = msgs.scrollHeight;
 
